@@ -38,9 +38,33 @@
       // shm_enabled: false,
 
       allow: {
-         publishers: ["/mission_control", "/pac_gcs/mission_origin_gps", ".*/cmd_vel", "/sim/all_robot_sim_poses", "/pac_gcs/status_pac", ".*/livox/lidar"],
-         subscribers: [".*/pose",],
-         service_servers: ["/sim/get_system_info"],
+         publishers: [],
+        // Ensure same list on drone but with publishers  
+         subscribers:[ "/tf", "/tf_static",
+                        ".*/livox/lidar",
+                        // Semantics
+                        ".*/semantics/pointcloud", 
+                        ".*/semantics/pointcloud/draco", 
+                        ".*/semantics/output",
+                        ".*/d455/color/image_raw/compressed",
+                        ".*/d455/aligned_depth_to_color/image_raw/compressedDepth",
+                        ".*/d455/color/camera_info",
+                        ".*/d455/aligned_depth_to_color/camera_info",
+                        ".*/d455/depth/color/points",
+                        "/detections",
+                        // Registration
+                        "/registration/pointcloud",
+                        //Mapping
+                        "/global_octomap",
+                        "/local_octomap",
+                        "/semantic_points",
+                        // Planning
+                        "/frontier_points",
+                        "/local_path",
+                        "/global_path",
+                        "/collision_visualizer",
+                        "/octomap_point_cloud_centers"],
+      //   service_servers: ["/sim/get_system_info"],
       //   service_clients: [],
       //   action_servers: [".*/rotate_absolute"],
       //   action_clients: [],
