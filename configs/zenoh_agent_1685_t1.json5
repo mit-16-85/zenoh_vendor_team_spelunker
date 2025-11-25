@@ -36,13 +36,35 @@
       ////
       //// NOT NEEDED
       // shm_enabled: false,
-
       allow: {
-         publishers: [".*/mavros/state", "/trajs", "/tf", "/tf_static"],
-         // publishers: [".*/pose", "/trajs"],
-         subscribers: [".*/mavros/state", "/trajs", "/tf", "/tf_static", ".*/world"],
+      // Ensure same list on team laptop but with subscribers  
+      publishers: [ "/tf", "/tf_static",
+                    ".*/livox/lidar",
+                    // Semantics
+                    ".*/semantics/pointcloud",
+                    ".*/semantics/pointcloud/draco", 
+                    ".*/semantics/output",
+                    ".*/d455/color/image_raw/compressed",
+                    ".*/d455/aligned_depth_to_color/image_raw/compressedDepth",
+                    ".*/d455/color/camera_info",
+                    ".*/d455/aligned_depth_to_color/camera_info",
+                    ".*/d455/depth/color/points",
+                    "/detections",
+                    // Registration
+                    "/registration/pointcloud",
+                    // Mapping
+                    "/global_octomap",
+                    "/local_octomap",
+                    "/semantic_points",
+                    // Planning
+                    "/frontier_points",
+                    "/local_path",
+                    "/global_path",
+                    "/collision_visualizer",
+                    "/octomap_point_cloud_centers"],
+      subscribers:[],
       //   service_servers: [".*/.*_parameters"],
-         service_clients: ["/sim/get_system_info"],
+      //   service_clients: ["/sim/get_system_info"],
       //   action_servers: [".*/rotate_absolute"],
       //   action_clients: [],
       },
@@ -136,12 +158,14 @@
   //// I WOULD SWITCH TO UDP
   connect: {
     endpoints: [
-      "tcp/192.168.0.20:7447", //GCS
-      "tcp/192.168.0.107:7447", //PX01
-      "tcp/192.168.0.119:7447", //PX02
-      "tcp/192.168.0.130:7447", //PX03
-      "tcp/192.168.0.189:7447", //PX04
-      "tcp/192.168.0.123:7447", //PX05
+      //"tcp/192.168.0.20:7447", //GCS
+      //"tcp/192.168.0.107:7447", //PX01
+      //"tcp/192.168.0.119:7447", //PX02
+      //"tcp/192.168.0.130:7447", //PX03
+      //"tcp/192.168.0.189:7447", //PX04
+      //"tcp/192.168.0.123:7447", //PX05
+      "tcp/192.168.0.150:7447" // Team #1 Laptop
+      // "tcp/192.168.0.115:7447", //Christian Laptop
     ]
   },
 
