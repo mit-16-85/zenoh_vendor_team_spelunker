@@ -52,6 +52,7 @@
                         ".*/d455/aligned_depth_to_color/camera_info",
                         ".*/d455/depth/color/points",
                         "/detections",
+                        "/tag_positions",
                         // Registration
                         "/registration/pointcloud",
                         //Mapping
