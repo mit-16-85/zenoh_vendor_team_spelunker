@@ -42,7 +42,6 @@
                     ".*/livox/lidar",
                     // Semantics
                     ".*/semantics/pointcloud",
-                    ".*/semantics/pointcloud/draco", 
                     ".*/semantics/output",
                     ".*/d455/color/image_raw/compressed",
                     ".*/d455/aligned_depth_to_color/image_raw/compressedDepth",
