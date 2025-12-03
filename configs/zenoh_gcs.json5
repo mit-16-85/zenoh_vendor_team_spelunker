@@ -45,7 +45,7 @@
                         // Semantics
                         ".*/semantics/pointcloud", 
                         ".*/semantics/output",
-                        ".*/d455/depth/color/points",
+                        "/d01/d455/depth/color/points",
                         ".*/d455/color/image_raw/compressed",
                         ".*/d455/aligned_depth_to_color/image_raw/compressedDepth",
                         ".*/d455/color/camera_info",
