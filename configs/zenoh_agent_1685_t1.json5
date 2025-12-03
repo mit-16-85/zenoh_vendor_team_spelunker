@@ -57,6 +57,7 @@
                     "/local_octomap",
                     "/semantic_points",
                     // Planning
+                    "/offboard/setpoint",
                     "/frontier_points",
                     "/local_path",
                     "/global_path",
