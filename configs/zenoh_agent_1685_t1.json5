@@ -64,7 +64,7 @@
                     "/collision_visualizer",
                     "/octomap_point_cloud_centers",
 		                "/semantic_voxels",
-                    "/landing_evaluator_node/plane_markers],
+                    "/landing_evaluator_node/plane_markers"],
       subscribers:[],
       //   service_servers: [".*/.*_parameters"],
       //   service_clients: ["/sim/get_system_info"],
